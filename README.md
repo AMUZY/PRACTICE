@@ -56,7 +56,8 @@ e.g `expect(header).toBeInTheDocument()`
 Note : The `jest.mock` method accepts the file path to the function being mocked as it's only parameter. This is only used for local modules, and not needed for modules inside the `node_modules` folder.
 
 ### Mocked function test example : 
-`// import the actual module
+```
+// import the actual module
 import apiRequest from './api-request.js';
 
 // then, tell Jest to mock the implementation!
@@ -79,7 +80,8 @@ it("Gets the full recipe for a dish", async () => {
  
   // assert
   expect(actualRecipe).toEqual(expectedValue);
-});`
+});
+```
 
 Note : `const MockResponse` is set as the expected resolved data that the `apiRequest` method is expected to resolve to.
 `mockResolvedValueOnce` accepts our mocked returned data `mockedResponse` and assigns the result to the 
