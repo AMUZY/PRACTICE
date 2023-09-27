@@ -1,34 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ABOUT THIS APP
+A Next.js app created to be able to learn and practice **Unit testing**, with the **React Testing Libaray(RTL)** and the **Jest** testing framework.
 
-## Getting Started
+## Content
+It consist of a Next.js app which has Jest framweork and RTL installed, a couple of local modules created as test subjects, a markdown file which contains useful definitions and methods used frequently in RTL and Jest, and test files available in the `__tests__` folder.
 
-First, run the development server:
+***Content of the markdown file within the app folder is given below, for rapid access :*** 
+---
+---
+---
+# React Testing Library(RTL) and Jest-Dom
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## RTL methods :
+- `render()` method takes an element/React component as it's parameter
+- `screen.X` method
+- `screen.getByX` queries are used to determine if an element is present in the DOM
+- `userEvent` 
+- `screen.queryByRole` is used to determine if an element is NOT rendered(if not found/present in the DOM). The `screen.queryByX` methods will return null if the element is not found.
+- `screen.findByX` is used to asynchronously find an element and the `async await` keywords should be used in the callback function of the parent `it` method.
+`async` on the callback, and `await` on the `screen.findByX` method.
+- `screen.getAllByX` , `screen.queryAllByX` , `screen.findAllByX` which gives an array of all elements that match the description provided
+- `waitFor` method is used alongside the `expect` method from Jest-dom library. It takes a callback function as it's parameter and an optional object which contains options on how the callback function should be called. Inside the callback function, should live the `expect` method which itself is the asynchronously executed function.
+- `beforeEach` method is a emthod that takes a callack funcntion as it's parameter and it's used inside of the callback of the `it` method to state that the code inside it should run before each test in the `it` method's callback function.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Tips :
+- the p tag cannot be gotten by `getByRole("paragraph)`, in stead get it by using `getByTestId("sometestid")`. Before you do this, you have to give the p tag a property `data-testid` and the value should be your desired test id "sometestid".
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Jest-Dom Matcher methods
+- `expect` method takes the html element/component as it's parameter
+Note that we can add `not.` before the assertion methods to inverse it
+- `toBeInTheDocument`
+- `toBeVisible`
+- `toHaveValue`
+- `toHaveStyle`
+- `toHaveTextContent`
+- `toHaveClass`
+- `toBeNull`
+- `toBeDisabled`
+- `toHaveClass`
+- `toEqual`
+- `toBe`
+- `toBeTruthy`
+- `toContain`
+- `toBeDefined`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+e.g `expect(header).toBeInTheDocument()`
 
-## Learn More
+## Jest npm commands
+- `npm test -- --coverage` : This coverage flag allows us to get a report of the lines in our code that was actually tested. This report then becomes available in a directory called `coverage/` that is created at runtime.
+- `npm test -- --silent` : Used to not print out results of the test in the console.
+- `jest --help` : Used to print out all the jest CLI options and their definitions, e.g coverage,silent e.t.c.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Jest Mock Function
+- `jest.fn()` is the function used to create functions mocked by jest. It is used inside the `__mock__` folder, placed inside the same directory as the module we want to mock. However, inside of our test file, we use `jest.mock(./module)` to mock the implementation of the real module and return our data from the mocked file in our `__mocks__` folder.
+Note : The `jest.mock` method accepts the file path to the function being mocked as it's only parameter. This is only used for local modules, and not needed for modules inside the `node_modules` folder.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Mocked function test example : 
+`// import the actual module
+import apiRequest from './api-request.js';
 
-## Deploy on Vercel
+// then, tell Jest to mock the implementation!
+jest.mock('./api-request.js');
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+it("Gets the full recipe for a dish", async () => {
+  // arrange  
+  const dish = "Pesto";
+  const expectedValue = { "Magical Deliciousness": "3 cups" };
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  // set the resolved value for the next call to apiRequest  
+  const mockResponse = {
+    status: "mock",
+    data: { "Magical Deliciousness": "3 cups" }
+  }
+  apiRequest.mockResolvedValueOnce(mockResponse);
+
+  // act  
+  const actualRecipe = await findRecipe(dish);
+ 
+  // assert
+  expect(actualRecipe).toEqual(expectedValue);
+});`
+
+Note : `const MockResponse` is set as the expected resolved data that the `apiRequest` method is expected to resolve to.
+`mockResolvedValueOnce` accepts our mocked returned data `mockedResponse` and assigns the result to the 
+
