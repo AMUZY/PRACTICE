@@ -5,9 +5,6 @@ A Next.js app created to be able to learn and practice **Unit testing**, with th
 It consist of a Next.js app which has Jest framweork and RTL installed, a couple of local modules created as test subjects, a markdown file which contains useful definitions and methods used frequently in RTL and Jest, and test files available in the `__tests__` folder.
 
 ***Content of the markdown file within the app folder is given below, for rapid access :*** 
----
----
----
 # React Testing Library(RTL) and Jest-Dom
 
 ## RTL methods :
