@@ -25,3 +25,34 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.page-wrapper {
+  width: max-content;
+  margin: 2rem auto;
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    button {
+      margin: 2rem auto;
+      padding: 4px 8px;
+      border: 2px dotted white;
+      border-radius: 4px;
+    }
+  }
+}
+.form-group {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  label {
+    margin: 8px;
+    padding: 4px 8px;
+  }
+  input {
+    margin: 8px;
+    padding: 4px 8px;
+    color: black;
+  }
+}

@@ -1,0 +1,16 @@
+installations :
+
+npx ts-jest config:init
+
+Then for jest to read typescript files, ts-node needs to be installed and available in your package.json file.
+
+Use npm install -g ts-node and npm install --save-dev ts.node
+
+// YOUTUBE TUTORIAL STARTS HERE :
+
+- Go to Nexjs testing docs (Straight to Jest and React Testing Library configuration page) through : https://nextjs.org/docs/pages/building-your-application/optimizing/testing#jest-and-react-testing-library
+- Create files (jest.config.js) and (jest.setup.js) in your main folder diretory
+- from the Next docs, copy and paste the content of the jest.config.js and jest.setup.js files, into your own jest.config.js and jest.setup.js files respectively.
+- Paste (import '@testing-library/jest-dom') inside the jest.setup.js file
+- Go to your package.json file and add ("test": "jest",
+  "coverage" : "jest --coverage") in the scripts config object
