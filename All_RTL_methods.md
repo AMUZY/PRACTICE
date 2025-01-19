@@ -1,3 +1,10 @@
+# ABOUT THIS APP
+A Next.js app created to be able to learn and practice **Unit testing**, with the **React Testing Libaray(RTL)** and the **Jest** testing framework.
+
+## Content
+It consist of a Next.js app which has Jest framweork and RTL installed, a couple of local modules created as test subjects, a markdown file which contains useful definitions and methods used frequently in RTL and Jest, and test files available in the `__tests__` folder.
+
+***Content of the markdown file within the app folder is given below, for rapid access :*** 
 # React Testing Library(RTL) and Jest-Dom
 
 ## RTL methods :
@@ -46,7 +53,8 @@ e.g `expect(header).toBeInTheDocument()`
 Note : The `jest.mock` method accepts the file path to the function being mocked as it's only parameter. This is only used for local modules, and not needed for modules inside the `node_modules` folder.
 
 ### Mocked function test example : 
-`// import the actual module
+```
+// import the actual module
 import apiRequest from './api-request.js';
 
 // then, tell Jest to mock the implementation!
@@ -69,7 +77,9 @@ it("Gets the full recipe for a dish", async () => {
  
   // assert
   expect(actualRecipe).toEqual(expectedValue);
-});`
+});
+```
 
 Note : `const MockResponse` is set as the expected resolved data that the `apiRequest` method is expected to resolve to.
 `mockResolvedValueOnce` accepts our mocked returned data `mockedResponse` and assigns the result to the 
+

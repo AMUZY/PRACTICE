@@ -1,46 +1,46 @@
-"use client";
-import React, { useState } from "react";
+'use client'
+import React, { useState } from 'react'
 
 const RegisterPage = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
 
   const registerUser = (e: EventTarget) => {
-    setIsLoading(true);
+    setIsLoading(true)
     setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-  };
+      setIsLoading(false)
+    }, 5000)
+  }
 
   const formInputs = [
     {
-      label: "Email",
-      name: "email",
-      type: "email",
-      placeholder: "Enter your email",
-      ariaLabel: "formEmail",
+      label: 'Email',
+      name: 'email',
+      type: 'email',
+      placeholder: 'Enter your email',
+      ariaLabel: 'formEmail'
     },
     {
-      label: "Phone",
-      name: "phone",
-      type: "tel",
-      placeholder: "Enter your phone number",
-      ariaLabel: "formPhone",
+      label: 'Phone',
+      name: 'phone',
+      type: 'tel',
+      placeholder: 'Enter your phone number',
+      ariaLabel: 'formPhone'
     },
     {
-      label: "Password",
-      name: "password",
-      type: "password",
-      placeholder: "Enter your password",
-      ariaLabel: "formPassword",
+      label: 'Password',
+      name: 'password',
+      type: 'password',
+      placeholder: 'Enter your password',
+      ariaLabel: 'formPassword'
     },
     {
-      label: "Confirm Password",
-      name: "confirmPassword",
-      type: "password",
-      placeholder: "Confirm your password",
-      ariaLabel: "formConfirmPassword",
-    },
-  ];
+      label: 'Confirm Password',
+      name: 'confirmPassword',
+      type: 'password',
+      placeholder: 'Confirm your password',
+      ariaLabel: 'formConfirmPassword'
+    }
+  ]
 
   return (
     <div className="page-wrapper">
@@ -57,20 +57,20 @@ const RegisterPage = () => {
                 placeholder={input.placeholder}
               />
             </div>
-          );
+          )
         })}
 
         <button
           onClick={(e) => {
-            e.preventDefault();
-            registerUser(e.target);
+            e.preventDefault()
+            registerUser(e.target)
           }}
         >
-          {isLoading ? "Loading..." : "Create account"}
+          {isLoading ? 'Loading...' : 'Create account'}
         </button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default RegisterPage;
+export default RegisterPage

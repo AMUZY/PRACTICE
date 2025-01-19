@@ -1,0 +1,75 @@
+@use "sass:math";
+
+@keyframes scroll-anime {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.size {
+  width: 100%;
+  height: 100svh;
+}
+// @function GetScrollTime (){
+//     @return
+// }
+@keyframes scroll-images {
+  0% {
+    transform: scale(5);
+  }
+  30% {
+    transform: scale(5);
+  }
+  90% {
+    transform: scale(1);
+  }
+}
+@function torem($pixels) {
+  $result: (math.div($pixels, 16) * 1rem);
+  @return $result;
+}
+.lineartextprops {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.scroll-cont {
+  @extend .size;
+  position: relative;
+}
+.scroll-images-cont {
+  @extend .size;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.scrollbar {
+  left: 0;
+  z-index: 1;
+  height: 10px;
+  background-color: #FF9900;
+}
+.scroll-progress-bar {
+  @extend .scrollbar;
+  top: 0;
+  position: fixed;
+  animation: scroll-anime linear;
+  animation-timeline: scroll();
+}
+.scroll-img1 {
+  font-size: clamp(torem(12),5vw,torem(64));
+  transform: scale(1);
+  @extend .lineartextprops;
+  background-image: linear-gradient(to bottom,red,#FFD600, #FF9900);
+  font-weight: 800;
+  animation: scroll-images linear;
+  animation-timeline: scroll();
+}
+.scroll-img2 {
+}
+.scroll-img3 {
+}
