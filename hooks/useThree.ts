@@ -126,7 +126,7 @@ const useThree = ({ objPath, parentId }: PropType) => {
       animate();
     } else {
       const warning = WebGL.getWebGL2ErrorMessage();
-      document.getElementById("container")?.appendChild(warning);
+      document.getElementById(parentId)?.appendChild(warning);
     }
   }, []);
 
