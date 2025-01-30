@@ -25,7 +25,7 @@ const useThree = ({ objPath, parentId }: PropType) => {
     function (gltf) {
       obj = gltf.scene;
       obj.position.set(0, 0, 0);
-      obj.scale.set(1, 1, 1);
+      obj.scale.set(0.2, 0.2, 0.2);
 
       // Set the mesh to cast shadows
       obj.traverse((child) => {
@@ -40,7 +40,7 @@ const useThree = ({ objPath, parentId }: PropType) => {
       renderer.render(scene, camera);
     },
     function (xhr) {
-      console.log(((xhr.loaded / 845156) * 100).toFixed(0) + "% loaded");
+      console.log(((xhr.loaded / xhr.total) * 100).toFixed(0) + "% loaded");
     },
     function (error) {
       console.error(error);
@@ -48,7 +48,7 @@ const useThree = ({ objPath, parentId }: PropType) => {
   );
 
   // Adding a ground mesh
-  const groundGeometry = new THREE.PlaneGeometry(10, 10, 32, 32);
+  const groundGeometry = new THREE.PlaneGeometry(100, 100, 32, 32);
   groundGeometry.rotateX(-Math.PI / 2);
   const groundMaterial = new THREE.MeshStandardMaterial({
     color: 0x555555,
@@ -58,42 +58,41 @@ const useThree = ({ objPath, parentId }: PropType) => {
   groundMesh.position.set(0, -0.7, 0);
   // groundMesh.castShadow = true;
   // groundMesh.receiveShadow = true;
-  scene.add(groundMesh);
+  // scene.add(groundMesh);
 
   // Adding light to the scene
   const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
   // scene.background = new THREE.Color("green")
   scene.add(ambientLight);
 
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
-  directionalLight.position.set(10, 10, 10);
-  directionalLight.castShadow = true;
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 50);
+  directionalLight.position.set(10, 50, 10);
+  // directionalLight.castShadow = true;
   scene.add(directionalLight);
 
   const spotLight = new THREE.SpotLight(0xffffff, 3, 100, 0.2, 0.5);
   spotLight.position.set(0, 25, 0);
   scene.add(spotLight);
 
-  camera.position.set(3, 3, 3);
+  camera.position.set(3, 5, 3);
   camera.lookAt(new THREE.Vector3(0, 0, 0));
-
 
   // Setting up the renderer
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.outputColorSpace = THREE.SRGBColorSpace;
-  renderer.setClearColor(0x000000);
+  renderer.setClearColor(new THREE.Color(0xffffff));
   renderer.setPixelRatio(window.devicePixelRatio);
 
   // To enable shadows
-  renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  // renderer.shadowMap.enabled = true;
+  // renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
   // Set the orbit controls
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
-  controls.enablePan = false;
+  controls.enablePan = true;
   controls.minDistance = 3;
-  controls.maxDistance = 20;
+  controls.maxDistance = 50;
   controls.minPolarAngle = 0.5;
   controls.maxPolarAngle = 2.5;
   controls.autoRotate = false;
@@ -101,9 +100,9 @@ const useThree = ({ objPath, parentId }: PropType) => {
   controls.update();
 
   useEffect(() => {
-    renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+    renderer.setSize(window.innerWidth / 1.5, window.innerHeight / 1.5);
     const canvasParent = document.getElementById(parentId);
-    renderer.domElement.style.cursor = "pointer";
+    renderer.domElement.style.cursor = "grab";
 
     if (canvasParent?.children[0]?.nodeName === "CANVAS") {
       canvasParent.removeChild(canvasParent?.children[0]);
@@ -128,6 +127,21 @@ const useThree = ({ objPath, parentId }: PropType) => {
       const warning = WebGL.getWebGL2ErrorMessage();
       document.getElementById(parentId)?.appendChild(warning);
     }
+
+    function sum(a: number) {
+      return (b: number) => {
+        return (c: number) => {
+          return a + b + c;
+        };
+      };
+    }
+
+    const sum1 = sum(1);
+    const sum2 = sum1(2);
+
+    const IsDivisible = (test: number) => (num: number) => num % test === 0;
+    const testNos = [1, 2, 3, 4, 5, 6];
+    console.log(testNos.filter(IsDivisible(2)));
   }, []);
 
   return;

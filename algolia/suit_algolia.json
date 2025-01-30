@@ -1,0 +1,122 @@
+[
+  {
+    "objectID": "1",
+    "brand": "Armani",
+    "size": "M",
+    "color": "Black",
+    "description": "Classic black two-piece suit made with premium wool, perfect for formal occasions.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "2",
+    "brand": "Hugo Boss",
+    "size": "L",
+    "color": "Navy Blue",
+    "description": "Stylish navy blue slim-fit suit, tailored to perfection for business and formal events.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "3",
+    "brand": "Zegna",
+    "size": "S",
+    "color": "Grey",
+    "description": "A luxurious grey suit with a modern cut, crafted from the finest Italian wool.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "4",
+    "brand": "Ralph Lauren",
+    "size": "XL",
+    "color": "Charcoal",
+    "description": "Elegant charcoal suit designed for a timeless, refined look with high-quality fabric.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "5",
+    "brand": "Gucci",
+    "size": "M",
+    "color": "Burgundy",
+    "description": "Sophisticated burgundy suit with a modern fit, perfect for stylish evening events.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "6",
+    "brand": "Calvin Klein",
+    "size": "L",
+    "color": "Blue",
+    "description": "Versatile blue two-piece suit with a slim-fit design, ideal for both business and casual wear.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "7",
+    "brand": "Brioni",
+    "size": "S",
+    "color": "Light Grey",
+    "description": "Light grey tailored suit with exquisite detailing and soft Italian fabric for ultimate comfort.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "8",
+    "brand": "Tom Ford",
+    "size": "XL",
+    "color": "Dark Green",
+    "description": "Dark green luxury suit with a unique color and modern silhouette for the discerning gentleman.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "9",
+    "brand": "Prada",
+    "size": "M",
+    "color": "Beige",
+    "description": "Beige slim-fit suit with a sharp cut, offering a contemporary style for formal occasions.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "10",
+    "brand": "Dolce & Gabbana",
+    "size": "L",
+    "color": "Black",
+    "description": "Sophisticated black suit with modern Italian tailoring, perfect for evening events.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "11",
+    "brand": "Versace",
+    "size": "S",
+    "color": "Navy",
+    "description": "Navy suit with bold design details, crafted from premium fabric for a statement look.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "12",
+    "brand": "Burberry",
+    "size": "M",
+    "color": "Brown",
+    "description": "Classic brown suit with a refined silhouette, ideal for both professional and formal settings.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "13",
+    "brand": "Michael Kors",
+    "size": "L",
+    "color": "Olive Green",
+    "description": "Stylish olive green suit with a tailored fit, perfect for modern and trendy occasions.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "14",
+    "brand": "Ermenegildo Zegna",
+    "size": "XL",
+    "color": "Dark Grey",
+    "description": "Dark grey suit with a premium finish and expert Italian craftsmanship for an elevated look.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  },
+  {
+    "objectID": "15",
+    "brand": "Givenchy",
+    "size": "S",
+    "color": "Black",
+    "description": "A sleek black suit with a minimalist design, ideal for formal events and high-end fashion.",
+    "img": "https://i5.walmartimages.com/seo/Wehilion-Mens-Suits-Set-Slim-Fit-Men-3-Piece-Dress-Suit-Prom-Blazer-Wedding-Formal-Jacket-Vest-Pants-Navy-Blue-XXL_ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg"
+  }
+]

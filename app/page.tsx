@@ -29,6 +29,12 @@ export default function Home () {
         <Link className={myClasses.link} href={"/three"}>
           Three JS
         </Link>
+        <Link className={myClasses.link} href={"/algolia"}>
+          ALGOLIA SEARCH
+        </Link>
+        <Link className={myClasses.link} href={"/algolia"}>
+          FUSE SEARCH
+        </Link>
       </section>
     </main>
   );
